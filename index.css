@@ -1,0 +1,255 @@
+/* 
+ * 域名质量检测工具 - 全局样式
+ * 设计风格：Professional SaaS - 简洁专业工具风格
+ * 核心原则：白色/浅灰背景，深蓝主色调，卡片式布局，清晰信息层次
+ * 字体：Plus Jakarta Sans（标题）+ JetBrains Mono（代码/数据）
+ */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+:root {
+  --radius: 0.625rem;
+  /* Professional Blue Palette */
+  --primary: oklch(0.40 0.16 255);
+  --primary-foreground: oklch(0.98 0 0);
+  --background: oklch(0.985 0.002 240);
+  --foreground: oklch(0.18 0.02 255);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.02 255);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.02 255);
+  --secondary: oklch(0.96 0.005 240);
+  --secondary-foreground: oklch(0.3 0.02 255);
+  --muted: oklch(0.96 0.005 240);
+  --muted-foreground: oklch(0.50 0.025 255);
+  --accent: oklch(0.94 0.01 240);
+  --accent-foreground: oklch(0.25 0.05 255);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.9 0.005 240);
+  --input: oklch(0.9 0.005 240);
+  --ring: oklch(0.38 0.15 255);
+  --chart-1: oklch(0.38 0.15 255);
+  --chart-2: oklch(0.55 0.15 200);
+  --chart-3: oklch(0.65 0.15 150);
+  --chart-4: oklch(0.7 0.18 80);
+  --chart-5: oklch(0.6 0.2 30);
+  --sidebar: oklch(0.97 0.003 240);
+  --sidebar-foreground: oklch(0.18 0.02 255);
+  --sidebar-primary: oklch(0.38 0.15 255);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.94 0.01 240);
+  --sidebar-accent-foreground: oklch(0.25 0.05 255);
+  --sidebar-border: oklch(0.9 0.005 240);
+  --sidebar-ring: oklch(0.38 0.15 255);
+  
+  /* Custom semantic colors */
+  --success: oklch(0.52 0.17 145);
+  --success-foreground: oklch(0.98 0 0);
+  --warning: oklch(0.65 0.18 75);
+  --warning-foreground: oklch(0.18 0 0);
+  --info: oklch(0.55 0.15 220);
+  --info-foreground: oklch(0.98 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+
+  /* 精致滚动条 */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: oklch(0.82 0.008 240);
+    border-radius: 99px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.68 0.015 240);
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+
+  /* 扁平化卡片（无阴影，用边框区分层次） */
+  .shadow-card {
+    box-shadow: none;
+  }
+  .shadow-card-hover {
+    box-shadow: none;
+  }
+
+  /* 渐变文字 */
+  .text-gradient-primary {
+    background: linear-gradient(135deg, oklch(0.40 0.16 255), oklch(0.55 0.18 280));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Status indicator dots */
+  .status-dot {
+    @apply inline-block w-2 h-2 rounded-full;
+  }
+  .status-dot-success { background-color: oklch(0.52 0.17 145); }
+  .status-dot-warning { background-color: oklch(0.65 0.18 75); }
+  .status-dot-danger { background-color: oklch(0.55 0.22 25); }
+  .status-dot-info { background-color: oklch(0.55 0.15 220); }
+  .status-dot-neutral { background-color: oklch(0.7 0.01 240); }
+
+  /* Scan animation */
+  @keyframes scan-line {
+    0% { transform: translateY(-100%); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(100%); opacity: 0; }
+  }
+
+  @keyframes pulse-ring {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 oklch(0.38 0.15 255 / 0.4); }
+    70% { transform: scale(1); box-shadow: 0 0 0 8px oklch(0.38 0.15 255 / 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 oklch(0.38 0.15 255 / 0); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  .skeleton-shimmer {
+    background: linear-gradient(90deg, 
+      oklch(0.93 0.005 240) 25%, 
+      oklch(0.97 0.003 240) 50%, 
+      oklch(0.93 0.005 240) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  /* Score ring */
+  .score-ring {
+    animation: pulse-ring 2s infinite;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   全局禁止复制：整个页面不可选中/复制
+   唯一例外：.allow-copy 类的元素（域名列表复制按钮区域）
+   ───────────────────────────────────────────────────────────────────────────── */
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* 允许输入框正常选中文字 */
+input, textarea {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* 一键补全高亮闪烁动画 */
+@keyframes highlight-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.7); }
+  30%  { box-shadow: 0 0 0 6px rgba(251, 191, 36, 0.4); }
+  60%  { box-shadow: 0 0 0 4px rgba(251, 191, 36, 0.2); }
+  100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0); }
+}
