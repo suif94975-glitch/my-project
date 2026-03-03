@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/api/login",
-      "destination": "api/auth.ts"
-    }
-  ]
-}
