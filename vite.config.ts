@@ -11,7 +11,7 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "./"), 
       // 添加下面这一行，告诉 Vite @shared 就在根目录下的 shared 文件夹
-      "@shared": path.resolve(__dirname, "./shared"), 
+      "@shared": path.resolve(__dirname, "./"), 
     },
   },
   plugins: [
