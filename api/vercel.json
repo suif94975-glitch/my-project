@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/login",
-      "destination": "/api/auth"
+      "destination": "api/auth.ts"
     }
   ]
 }
