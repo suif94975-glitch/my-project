@@ -1,0 +1,2 @@
+ALTER TABLE `seo_notify_templates` MODIFY COLUMN `templateType` enum('replace_done','check_start','reply_keyword') NOT NULL;--> statement-breakpoint
+ALTER TABLE `seo_notify_templates` ADD `enabled` boolean DEFAULT true NOT NULL;

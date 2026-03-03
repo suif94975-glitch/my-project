@@ -1,0 +1,1 @@
+ALTER TABLE `vendor_domains` MODIFY COLUMN `category` enum('web','h5','full','sports','live','proxy_web','proxy_h5','lite_h5','lite_sports_h5','fujian_web','fujian_h5') NOT NULL;

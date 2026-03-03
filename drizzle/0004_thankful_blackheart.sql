@@ -1,0 +1,1 @@
+ALTER TABLE `app_users` MODIFY COLUMN `status` enum('pending','active','rejected','locked') NOT NULL DEFAULT 'pending';

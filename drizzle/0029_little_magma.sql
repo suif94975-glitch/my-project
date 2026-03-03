@@ -1,0 +1,1 @@
+ALTER TABLE `scheduled_task_groups` MODIFY COLUMN `tool` enum('itdog','aliyun','zhale') NOT NULL DEFAULT 'itdog';

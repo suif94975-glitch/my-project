@@ -1,0 +1,1 @@
+ALTER TABLE `scheduled_domains` ADD `totalFailureCycles` int DEFAULT 0 NOT NULL;
